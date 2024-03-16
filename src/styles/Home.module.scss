@@ -1,0 +1,12 @@
+.hide {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.home {
+  width: 80vw;
+  margin: 0 auto;
+}

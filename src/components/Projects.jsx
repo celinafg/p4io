@@ -7,15 +7,14 @@ const Projects = async () => {
 
   return (
     <section id="projects">
-      <div></div>
       <h2 className="work">recent work</h2>
       <div className="container">
-        <ul>
+        <ul className="grid-container">
           {projects.map((project) => {
             const { id, date, title, description, imgurl, company } = project;
 
             return (
-              <li className="li" key={id}>
+              <li className="li grid-item" key={id}>
                 <ProjectCard
                   key={id}
                   title={title}

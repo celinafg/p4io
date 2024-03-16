@@ -1,5 +1,6 @@
 import { About, Hero, Projects, Navbar, Footer } from "../components";
-import "../styles/Home.scss";
+import styles from "../styles/Home.module.scss";
+import "../styles/globals.scss";
 
 const navLinks = [
   { href: "#home", label: "home", status: "active" },
@@ -11,10 +12,13 @@ const navLinks = [
 const Home = async () => {
   return (
     <main>
-      <Navbar links={navLinks} />
-      <Hero />
-      <Projects />
-      <About />
+      <div className={styles.home}>
+        <Navbar links={navLinks} />
+        <Hero />
+        <Projects />
+        <About />
+      </div>
+
       <Footer />
     </main>
   );

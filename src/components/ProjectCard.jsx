@@ -5,9 +5,9 @@ import SVGPhoto from "../../public/images/arrow.svg";
 const ProjectCard = ({ imgurl, description, title, link, comp }) => {
   return (
     <Link href={link}>
-      <div>
+      <div className="allCard">
         <div className="card">
-          <div className="thumbnail"></div>
+          <div className="thumbnail">thumb</div>
           <div className="text">
             <p className="comp"> {comp}</p>
             <h2 className="title"> {title}</h2>

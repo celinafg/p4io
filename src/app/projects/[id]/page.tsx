@@ -1,11 +1,5 @@
-// "use client";
-import {
-  getprojectById,
-  getAllprojects,
-  getHeadings,
-} from "../../../../lib/api";
+import { getprojectById } from "../../../../lib/api";
 import { Navbar } from "@/components";
-import "../../../styles/ProjectPage.scss";
 
 interface Node {
   data: {
@@ -51,10 +45,14 @@ export default async function project({
   const navLinks = parseNodes(headings as Node[]);
 
   return (
-    <main>
-      <Navbar links={navLinks} backButton={true} observeSelector="h2" />
-      <div className="projectpage">
-        <article className="projectcontent">
+    <main style={{ margin: "auto", padding: "auto" }}>
+      <div>
+        <Navbar links={navLinks} backButton={true} observeSelector="h2" />
+
+        <article
+          className="prose prose-slate"
+          style={{ margin: "auto", padding: "auto" }}
+        >
           <h1>{title}</h1>
           <h4>{date}</h4>
           <div dangerouslySetInnerHTML={{ __html: html }} />
