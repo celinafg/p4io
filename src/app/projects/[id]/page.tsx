@@ -1,4 +1,4 @@
-import { getprojectById } from "../../../../lib/api";
+import { getprojectById, getAllProjects } from "../../../../lib/api";
 import { Navbar } from "@/components";
 
 interface Node {
@@ -60,4 +60,23 @@ export default async function project({
       </div>
     </main>
   );
+}
+
+export async function generateStaticParams() {
+  const projects = await getAllProjects();
+
+  return projects.map((project) => ({
+    id: project.id,
+  }));
+}
+
+export async function generateMetadata({
+  params: { id },
+}: {
+  params: { id: string };
+}) {
+  const { title } = await getprojectById(id);
+  return {
+    title,
+  };
 }

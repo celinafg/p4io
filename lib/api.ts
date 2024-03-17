@@ -92,7 +92,7 @@ export async function getPageMarkdown(string_: any) {
   };
 }
 
-export async function getAllprojects() {
+export async function getAllProjects() {
   const projects = await Promise.all(
     getprojectFiles().map((id) => getprojectById(id))
   );

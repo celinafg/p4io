@@ -1,9 +1,9 @@
 import ProjectCard from "./ProjectCard";
 import "../styles/Projects.scss";
-import { getAllprojects } from "../../lib/api";
+import { getAllProjects } from "../../lib/api";
 
 const Projects = async () => {
-  const projects = await getAllprojects();
+  const projects = await getAllProjects();
 
   return (
     <section id="projects">
