@@ -14,7 +14,7 @@ const Navbar = ({
       let currentActiveId = "";
 
       elements.forEach((el) => {
-        const elTop = el.offsetTop - 60; // 60px offset
+        const elTop = el.offsetTop - 90;
         const isPastEl = window.pageYOffset >= elTop;
 
         if (isPastEl) {
@@ -30,6 +30,14 @@ const Navbar = ({
           item.classList.add("active");
         }
       });
+
+      //change background color on scroll
+      document.body.style.transition = "background-color 0.5s ease";
+      if (currentActiveId === "projects") {
+        document.body.style.backgroundColor = "#F1EAE4";
+      } else {
+        document.body.style.backgroundColor = "#c6e3f3";
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
