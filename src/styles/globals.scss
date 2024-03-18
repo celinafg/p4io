@@ -30,11 +30,11 @@ body {
 }
 
 /* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
+// html {
+//   -moz-text-size-adjust: none;
+//   -webkit-text-size-adjust: none;
+//   text-size-adjust: none;
+// }
 
 body,
 h1,
@@ -111,7 +111,7 @@ textarea:not([rows]) {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 3em;
   grid-auto-rows: auto;
   align-items: start; //remove if not wanted
   grid-auto-rows: min-content; //remove if not wanted

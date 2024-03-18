@@ -1,18 +1,15 @@
-.projectpage {
-  padding: 0;
+#htmlContent {
+  width: 80vw;
   margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+  }
 }
 
-.projectcontent {
-  // padding: 2rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
+.articleprose {
+  width: 80vw;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    width: 60vw;
+  }
 }

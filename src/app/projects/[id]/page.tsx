@@ -1,5 +1,6 @@
 import { getprojectById, getAllProjects } from "../../../../lib/api";
 import { Navbar } from "@/components";
+import "../../../styles/ProjectPage.scss";
 
 interface Node {
   data: {
@@ -45,17 +46,17 @@ export default async function project({
   const navLinks = parseNodes(headings as Node[]);
 
   return (
-    <main style={{ margin: "auto", padding: "auto" }}>
-      <div>
+    <main className="container mx-auto px-3 py-4 md:px-0">
+      <div className="projectpage">
         <Navbar links={navLinks} backButton={true} observeSelector="h2" />
 
         <article
-          className="prose prose-slate"
+          className="prose prose-lg xl:prose-kl articleprose"
           style={{ margin: "auto", padding: "auto" }}
         >
           <h1>{title}</h1>
           <h4>{date}</h4>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div dangerouslySetInnerHTML={{ __html: html }} id="htmlContent" />
         </article>
       </div>
     </main>
