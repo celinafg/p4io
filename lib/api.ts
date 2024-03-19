@@ -12,6 +12,7 @@ import rehypeStringify from "rehype-stringify";
 import remarkToc from "remark-toc";
 import { headingTree } from "./headings";
 import { remark } from "remark";
+import remarkImages from "remark-images";
 
 import project from "@/app/projects/[id]/page";
 
@@ -53,6 +54,7 @@ function getParser() {
         }),
       })
       .use(headingTree)
+      .use(remarkImages)
   );
 }
 

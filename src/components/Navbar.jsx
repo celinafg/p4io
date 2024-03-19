@@ -14,7 +14,7 @@ const Navbar = ({
       let currentActiveId = "";
 
       elements.forEach((el) => {
-        const elTop = el.offsetTop - 90;
+        const elTop = el.offsetTop - 310;
         const isPastEl = window.pageYOffset >= elTop;
 
         if (isPastEl) {
