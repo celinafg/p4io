@@ -13,16 +13,14 @@ import remarkToc from "remark-toc";
 import { headingTree } from "./headings";
 import { remark } from "remark";
 import remarkImages from "remark-images";
-
-import project from "@/app/projects/[id]/page";
-
-// import rehypePrettyCode from "rehype-pretty-code";
-
-interface Heading {
-  depth: number;
-  value: string;
-  slug: string;
-}
+import remarkFlexibleContainers from "remark-flexible-containers";
+import remarkHighlight from "./remarkHighlight";
+import html from "remark-html";
+import remarkDirectiveRehype from "remark-directive-rehype";
+import remarkDirective from "remark-directive";
+import rehypeRaw from "rehype-raw";
+import rehypeFormat from "rehype-format";
+import rehypeDocument from "rehype-document";
 
 const projectsDirectory = path.join(process.cwd(), "_projects");
 
@@ -31,31 +29,28 @@ function getprojectFiles() {
 }
 
 function getParser() {
-  return (
-    unified()
-      .use(remarkParse)
-      .use(remarkRehype)
-      .use(remarkGfm)
-      // .use(rehypePrettyCode, {
-      //   theme: "one-dark-pro",
-      // })
-      .use(rehypeStringify)
-      .use(rehypeStringify)
-      .use(rehypeSlug)
-      .use(rehypeAutolinkHeadings, {
-        content: (arg) => ({
-          type: "element",
-          tagName: "a",
-          properties: {
-            href: `#${String(arg.properties?.id)}`,
-            // style: "margin-right: 10px",
-          },
-          children: [{ type: "text", value: "" }],
-        }),
-      })
-      .use(headingTree)
-      .use(remarkImages)
-  );
+  return unified()
+    .use(remarkParse)
+    .use(remarkHighlight)
+    .use(remarkFlexibleContainers)
+    .use(remarkGfm)
+    .use(rehypeSlug)
+    .use(remarkToc)
+    .use(rehypeAutolinkHeadings, {
+      content: (arg) => ({
+        type: "element",
+        tagName: "a",
+        properties: {
+          href: `#${String(arg.properties?.id)}`,
+        },
+        children: [{ type: "text", value: "" }],
+      }),
+    })
+    .use(headingTree)
+    .use(remarkImages)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeStringify);
 }
 
 const parser = getParser();

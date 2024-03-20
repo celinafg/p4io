@@ -6,7 +6,7 @@ company: a comapny
 link: /alink
 ---
 
-KLOA's focus as a B2B startup is to ::make search easier by saving users typing effort::**::.::** Their new search experience is composed of a novel keyboard layout and contextual prediction.
+KLOA's focus as a B2B startup is to ==make search easier by saving users typing effort.== Their new search experience is composed of a novel keyboard layout and contextual prediction.
 
 > #### Why change the keyboard layout?
 
@@ -39,9 +39,12 @@ Results from previous research and diary studies revealed that users had difficu
 
 ### What are we testing?
 
+::: warning Attention
+
 ![Image.png](/images/Image.png)
 
 ![Image.png](/images//Image2.png)
+:::
 
 We tested the latest release at that time, but taped over the search input field and the word ribbon. We convered these UI elements ot mimic similar changes in KLOA's most recent design explorations.
 

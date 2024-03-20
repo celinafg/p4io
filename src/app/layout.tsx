@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Encode_Sans } from "next/font/google";
 import "../styles/globals.scss";
 
-const dmsans = DM_Sans({ subsets: ["latin"] });
+const dmsans = DM_Sans({ subsets: ["latin"], variable: "--font-dmsans" });
+const encodesans = Encode_Sans({
+  subsets: ["latin"],
+  variable: "--font-encodesans",
+});
 
 export const metadata: Metadata = {
   title: "Celina's Portfolio",
@@ -16,7 +20,9 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={dmsans.className}>{children}</body>
+      <body className={`${dmsans.variable} ${encodesans.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

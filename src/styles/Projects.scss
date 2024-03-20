@@ -101,3 +101,8 @@
 .container ul li:not(:first-child) .card {
   flex-direction: column;
 }
+
+.highlight {
+  background-color: yellow;
+  color: black;
+}

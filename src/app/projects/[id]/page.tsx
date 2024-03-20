@@ -44,22 +44,22 @@ export default async function project({
 }) {
   const { html, title, date, headings } = await getprojectById(id);
   const navLinks = parseNodes(headings as Node[]);
-
   return (
-    <main className="container mx-auto px-3 py-4 md:px-0">
-      <div className="projectpage">
-        <Navbar links={navLinks} backButton={true} observeSelector="h2" />
+    <div className="container">
+      <main className="eh mx-auto px-3 py-4 md:px-0">
+        <div>
+          <Navbar links={navLinks} backButton={true} observeSelector="h2" />
 
-        <article
-          className="prose prose-lg xl:prose-kl articleprose"
-          style={{ margin: "auto", padding: "auto" }}
-        >
-          <h1>{title}</h1>
-          <h4>{date}</h4>
-          <div dangerouslySetInnerHTML={{ __html: html }} id="htmlContent" />
-        </article>
-      </div>
-    </main>
+          <article
+            className="prose prose-lg xl:prose-kl articleprose"
+            style={{ margin: "auto", padding: "auto" }}
+          >
+            <h1>{title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: html }} id="htmlContent" />
+          </article>
+        </div>
+      </main>
+    </div>
   );
 }
 

@@ -75,6 +75,16 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
+  font-family: var(--font-encodesans);
+}
+
+p,
+a,
+li,
+ul,
+ol,
+table {
+  font-family: var(--font-dmsans);
 }
 
 a:not([class]) {
@@ -131,4 +141,9 @@ textarea:not([rows]) {
   .grid-container {
     grid-template-columns: 1fr;
   }
+}
+
+.highlight {
+  background-color: rgb(246, 215, 246);
+  color: black;
 }
