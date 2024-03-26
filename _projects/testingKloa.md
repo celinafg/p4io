@@ -6,11 +6,23 @@ company: a comapny
 link: /alink
 ---
 
-KLOA's focus as a B2B startup is to ==make search easier by saving users typing effort.== Their new search experience is composed of a novel keyboard layout and contextual prediction.
+KLOA's focus as a B2B startup is to ==make search easier by saving users typing effort.==
+Their new search experience is composed of a novel keyboard layout and contextual
+prediction.
 
 > #### Why change the keyboard layout?
 
 > Smaller tap targets require more precision. Grouping letters to make a larger tap target can make search easier, without requiring typing with too much precision.
+
+#### Background
+
+This usability study was conducted with a client for a usability study project.
+
+:::column
+
+#### Role
+
+UX Researcher, created usability test kits, conducted usability study sessions.
 
 #### Background
 
@@ -39,12 +51,9 @@ Results from previous research and diary studies revealed that users had difficu
 
 ### What are we testing?
 
-::: warning Attention
-
 ![Image.png](/images/Image.png)
 
 ![Image.png](/images//Image2.png)
-:::
 
 We tested the latest release at that time, but taped over the search input field and the word ribbon. We convered these UI elements ot mimic similar changes in KLOA's most recent design explorations.
 
@@ -57,10 +66,6 @@ We created a one-pager describing key features, across the native shopping UI an
 3. Barriers and frustrations participants encounter when using KLOA in the context of mobile app shopping
 
 ### Who do we want to learn from?
-
-| Participant Profile                                                                                                  | Research Methods                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \- Shopped on mobile apps within the last month at least a few times <br>- English speaking <br>- 18 years and older | Qualitative<br>- Semi structured in-person interview <br>- Think aloud protocol<br><br>Quantitative<br>- User Burden Scale (Difficulty of Use)<br>- Rating scales <br>- Task completion |
 
 > ### Why mixed methods?
 

@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import { DM_Sans, Encode_Sans } from "next/font/google";
-import "../styles/globals.scss";
+import type { Metadata } from "next";
+import Navbar from "./components/Navbar";
+import "./styles/globals.scss";
 
 const dmsans = DM_Sans({ subsets: ["latin"], variable: "--font-dmsans" });
 const encodesans = Encode_Sans({
@@ -10,18 +11,25 @@ const encodesans = Encode_Sans({
 
 export const metadata: Metadata = {
   title: "Celina's Portfolio",
-  description: "handmade by the author",
+  description: "handmade by Celina",
 };
 
 export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const navLinks = [
+    { href: "#home", label: "home", status: "active" },
+    { href: "#projects", label: "projects" },
+    { href: "#about", label: "about" },
+    { href: "resume.com", label: "resume", customClassName: "hide" },
+  ];
   return (
     <html lang="en">
       <body className={`${dmsans.variable} ${encodesans.variable}`}>
-        {children}
+        <Navbar links={navLinks} />
+        <main style={{ padding: "4rem" }}>{children}</main>
       </body>
     </html>
   );

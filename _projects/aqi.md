@@ -3,7 +3,6 @@ date: 2023-04-08
 title: Protecting against wildfires
 description: KLOA’s novel keyboard layout opens potential for more efficient ways to search
 company: SPECULATIVE
-tag: ["all", "web"]
 link: /airquality
 ---
 
@@ -22,8 +21,6 @@ Role: UX designer, UX researcher, Prototyper
 Deliverables: Research findings, design specs
 Format: AQI system
 Tools: Figma
-
-[image of final delivery here]
 
 ## Summary
 

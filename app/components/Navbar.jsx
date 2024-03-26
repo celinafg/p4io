@@ -1,7 +1,7 @@
 "use client";
-import "../styles/Navbar.scss";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
+import "../styles/Navbar.scss";
 
 const Navbar = ({
   links = [],
@@ -59,7 +59,7 @@ const Navbar = ({
   };
 
   return (
-    <nav>
+    <nav className="nav">
       <div className="divc">
         <BackButton />
         <ul>

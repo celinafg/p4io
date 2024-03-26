@@ -1,0 +1,81 @@
+$colors: orange, green, blue, purple, pink, red;
+
+.divc {
+  position: sticky !important;
+  z-index: 10;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0px -0.8px 6px rgba(98, 98, 98, 0.3));
+
+  ul {
+    margin: inherit;
+    padding: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    width: inherit;
+    padding: 4px;
+    text-align: center;
+    padding: 0.8rem 0;
+
+    a {
+      text-decoration: none;
+    }
+
+    // Move the color loop outside of the anchor element's styling
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{$i}) a {
+        color: nth($colors, $i);
+      }
+    }
+
+    &.active {
+      background-color: #701438;
+      border-radius: 11px;
+      font-weight: 400;
+
+      a {
+        color: #ffd0e6;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    padding: 4px;
+    align-items: center;
+  }
+
+  div {
+    background: white;
+    border-radius: 11px;
+    width: 95vw;
+    @media screen and (min-width: 768px) {
+      width: 60vw;
+    }
+  }
+}
+
+.back {
+  display: block;
+  background-color: pink;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hide {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}

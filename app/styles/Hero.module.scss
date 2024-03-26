@@ -1,0 +1,25 @@
+.home {
+  background-color: black;
+}
+
+.title {
+  background-color: pink;
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.loc {
+  flex-grow: 1;
+}
+.info {
+  background-color: yellow;
+  display: flex;
+  height: 200vh;
+}
+
+.centertext {
+  flex-grow: 3;
+  background-color: blue;
+}
