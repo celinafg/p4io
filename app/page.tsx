@@ -1,7 +1,6 @@
 import styles from "./page.module.css";
 import { DM_Sans, Encode_Sans } from "next/font/google";
-import Projects from "./components/Projects";
-import { Hero, Navbar, About, Footer } from "./components";
+import { Hero, Navbar, About, Footer, Projects } from "./components";
 
 const dmsans = DM_Sans({ subsets: ["latin"], variable: "--font-dmsans" });
 const encodesans = Encode_Sans({
