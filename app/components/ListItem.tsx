@@ -16,25 +16,23 @@ export default function ListItem({ project }: Props) {
 
   return (
     <div>
-      <li className={`${styles.li} ${styles.griditem}`} key={id}>
-        <Link href={`/projects/${id}`}>
-          <div className="allCard">
-            <div className="card">
-              <div className="thumbnail">thumb</div>
-              <div className="text">
-                <p className="comp"> {company}</p>
-                <h2 className="title"> {title}</h2>
-                <p className="desc"> {description}</p>
-                <div className="arrow">
-                  <Image src={SVGPhoto} alt="arrow" width={40} height={40} />
-                </div>
+      <Link href={`/projects/${id}`}>
+        <div className={styles.allCard}>
+          <div className={styles.card}>
+            <div className={styles.thumbnail}>thumb</div>
+            <div className="text">
+              <p className="comp"> {company}</p>
+              <h3 className="title"> {title}</h3>
+              <p className="desc"> {description}</p>
+              <div className="arrow">
+                <Image src={SVGPhoto} alt="arrow" width={40} height={40} />
               </div>
             </div>
           </div>
-        </Link>
-        <br />
-        {/* <p>{formattedDate}</p> */}
-      </li>
+        </div>
+      </Link>
+      <br />
+      {/* <p>{formattedDate}</p> */}
     </div>
   );
 }
