@@ -2,64 +2,35 @@ import styles from "../styles/Hero.module.scss";
 
 const Hero = () => {
   return (
-    <section id="home" className={styles.home}>
-      <div className={styles.title}>
-        <span>
-          <h1>research. </h1>
-          <h1>design.</h1>
-          <h1>build.</h1>
-        </span>
-      </div>
-      <div className={styles.info}>
-        <div className={styles.loc}>
-          <p>BASED IN SEATTLE</p>
-          <p>LINKEDIN</p>
-          <p>RESUME</p>
+    <>
+      <section id="home" className={styles.home}>
+        <div className={styles.title}>
+          <span>
+            <h2>research.</h2>
+            <h2>design.</h2>
+            <h2>build.</h2>
+          </span>
         </div>
-        <div className={styles.centertext}>
-          <p>
-            I’m a frontend engineer turned UX Designer passionate about creating
-            seamless and accessible experiences from design conception to
-            implementation.
-          </p>
-        </div>
-      </div>
-      <div className="continue">
-        <p>SCROLL</p>
-        <div className="line"></div>
-      </div>
-      {/* <div className="hcontainer">
-        <div className="hi">
-          <div className="htitle">
-            <span>
-              <h1>research. </h1>
-              <h1>design.</h1>
-              <h1>build.</h1>
-            </span>
+        <div className={styles.info}>
+          <div className={styles.loc}>
+            <h6> SEATTLE</h6>
+            <h6>LINKEDIN</h6>
+            <h6>RESUME</h6>
           </div>
-          <div className="descriptionh">
-            <div className="locinfo">
-              <p>BASED IN SEATTLE</p>
-              <p>LINKEDIN</p>
-              <p>RESUME</p>
-            </div>
-            <div className="centertext">
-              <div>
-                <p>
-                  I’m a frontend engineer turned UX Designer passionate about
-                  creating seamless and accessible experiences from design
-                  conception to implementation.
-                </p>
-              </div>
-            </div>
+          <div className={styles.centertext}>
+            <p>
+              I’m a frontend engineer turned UX Designer passionate about
+              creating seamless and accessible experiences from design
+              conception to implementation.
+            </p>
           </div>
         </div>
-      </div>
-      <div className="continue">
+      </section>
+      <div className={styles.continue}>
         <p>SCROLL</p>
-        <div className="line"></div>
-      </div> */}
-    </section>
+        <div className={styles.line}></div>
+      </div>
+    </>
   );
 };
 
