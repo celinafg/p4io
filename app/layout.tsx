@@ -19,17 +19,10 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const navLinks = [
-    { href: "#home", label: "home", status: "active" },
-    { href: "#projects", label: "projects" },
-    { href: "#about", label: "about" },
-    { href: "resume.com", label: "resume", customClassName: "hide" },
-  ];
   return (
     <html lang="en">
       <body className={`${dmsans.variable} ${encodesans.variable}`}>
-        <Navbar links={navLinks} />
-        <main style={{ padding: "4rem" }}>{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

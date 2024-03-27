@@ -1,10 +1,7 @@
 import styles from "./page.module.css";
-import Link from "next/link";
 import { DM_Sans, Encode_Sans } from "next/font/google";
 import Projects from "./components/Projects";
-import MyProfilePic from "./components/MyProfilePic";
-import { Hero } from "./components";
-import { getProjectsMeta, getProjectByName } from "../lib/projects";
+import { Hero, Navbar, About, Footer } from "./components";
 
 const dmsans = DM_Sans({ subsets: ["latin"], variable: "--font-dmsans" });
 const encodesans = Encode_Sans({
@@ -20,42 +17,17 @@ const navLinks = [
 
 export const revalidate = 86400;
 
-type Props = {
-  params: {
-    projectId: string;
-  };
-};
-
-export async function generateStaticParams() {
-  const projects = await getProjectsMeta();
-
-  if (!projects) return [];
-
-  return projects.map((project) => ({
-    projectId: project.id,
-  }));
-}
-
-export async function generateMetadata({ params: { projectId } }: Props) {
-  const project = await getProjectByName(`${projectId}.mdx`);
-
-  if (!project) {
-    return {
-      title: "Project not found",
-    };
-  }
-  return {
-    title: project.meta.title,
-  };
-}
-
-export default async function Home({ params: { projectId } }: Props) {
-  const project = await getProjectsMeta();
-  console.log(project);
+export default async function Home() {
   return (
-    <div className={`${dmsans.variable} ${encodesans.variable} ${styles.main}`}>
+    <div
+      className={`${dmsans.variable} ${encodesans.variable} ${styles.main}`}
+      style={{ padding: "1rem 4rem" }}
+    >
+      <Navbar links={navLinks} />
       <Hero />
       <Projects />
+      <About />
+      <Footer />
     </div>
   );
 }

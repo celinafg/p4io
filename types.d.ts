@@ -4,6 +4,10 @@ export type Meta = {
   date: string;
   tags: string[];
   headings?: [];
+  description: string;
+  img?: string;
+  company?: string;
+  title?: string;
 };
 
 type ProjectPost = {

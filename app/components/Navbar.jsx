@@ -21,10 +21,10 @@ const Navbar = ({
           currentActiveId = el.getAttribute("id");
         }
       });
-
       const navItems = document.querySelectorAll("nav ul li");
       navItems.forEach((item) => {
         item.classList.remove("active");
+
         const itemNavValue = item.dataset.nav.replace("#", "");
         if (itemNavValue === currentActiveId) {
           item.classList.add("active");

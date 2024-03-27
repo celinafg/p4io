@@ -85,6 +85,9 @@ export async function getProjectByName(
     date: string;
     tags: string[];
     headings: string[];
+    description: string;
+    img: string;
+    company?: string;
   }>({
     source: rawMDX,
     components: {
@@ -112,6 +115,9 @@ export async function getProjectByName(
       date: frontmatter.date,
       tags: frontmatter.tags,
       headings: headings,
+      description: frontmatter.description,
+      img: frontmatter.description,
+      company: frontmatter.company,
     },
     content,
   };

@@ -75,7 +75,7 @@ export default async function Project({ params: { projectId } }: Props) {
 
   return (
     <>
-      <Navbar links={navLinks} />
+      <Navbar links={navLinks} backButton={true} observeSelector="h2" />{" "}
       <h2>{meta.title}</h2>
       <p>{pubDate}</p>
       <article>{content}</article>

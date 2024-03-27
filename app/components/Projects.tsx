@@ -1,5 +1,6 @@
 import { getProjectsMeta } from "../../lib/projects";
 import ListItem from "./ListItem";
+import "../styles/Projects.module.scss";
 
 export default async function Projects() {
   const projects = await getProjectsMeta();
@@ -7,14 +8,13 @@ export default async function Projects() {
   if (!projects) {
     return <p>no posts avail</p>;
   }
-
   return (
-    <section>
-      <h2></h2>
-      <ul>
-        {projects.map((project) => (
-          <ListItem key={project.id} project={project} />
-        ))}
+    <section id="projects">
+      <h2>recent work</h2>
+      <ul className="grid-container">
+        {projects.map((project) => {
+          return <ListItem key={project.id} project={project} />;
+        })}
       </ul>
     </section>
   );

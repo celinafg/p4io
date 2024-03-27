@@ -1,11 +1,11 @@
 import Image from "next/image";
 import SVGPhoto from "../../public/images/about.svg";
-import "../styles/About.scss";
+import styles from "../styles/About.module.scss";
 
 const About = () => {
   return (
     <section id="about">
-      <div className="aboutcont">
+      <div className={styles.aboutcont}>
         <div className="abouti">
           <Image src={SVGPhoto} alt="arrow" width={40} height={40} />
         </div>
